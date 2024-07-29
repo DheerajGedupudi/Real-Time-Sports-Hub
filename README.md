@@ -17,7 +17,7 @@ This project was developed as part of the CSEN 317 - Distributed Systems course 
 1. Clone the repository:
 
 ```sh
-git clone <repository-url>
+git clone https://github.com/DheerajGedupudi/Real-Time-Sports-Hub
 ```
 
 2. Navigate to the root directory of each component (broker, coordinator, publisher, subscriber) and run the following command to package the application:
