@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Publisher Home</title>
+</head>
+<body>
+<h1>Publisher Home</h1>
+<a href="/set-topic">Set Topic</a>
+<br>
+<a href="/publish">Publish Message</a>
+<br>
+<a href="/broker">View Broker</a>
+<h2>Current Topic: <span th:text="${topic}">None</span></h2>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Brokers</title>
+</head>
+<body>
+<h1>Brokers</h1>
+<ul>
+    <li th:each="broker : ${brokers}" th:text="${broker}">Broker</li>
+</ul>
+<a href="/">Back to home</a>
+</body>
+</html>

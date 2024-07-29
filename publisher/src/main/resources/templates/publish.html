@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Publish Message</title>
+</head>
+<body>
+<h1>Publish Message</h1>
+<form action="/publish" method="post">
+    <label for="message">Message:</label>
+    <input type="text" id="message" name="message" required>
+    <button type="submit">Publish</button>
+</form>
+<p>Current Topic: <span th:text="${topic}"></span></p>
+<a href="/">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>My Topics</title>
+</head>
+<body>
+<h1>My Subscribed Topics</h1>
+<ul>
+  <li th:each="topic : ${subscribedTopics}">
+    <span th:text="${topic}">Topic</span>
+    <form th:action="@{/unsubscribe}" method="post" style="display:inline;">
+      <input type="hidden" name="topic" th:value="${topic}"/>
+      <button type="submit">Unsubscribe</button>
+    </form>
+    <a th:href="@{/messages(topic=${topic})}">View Messages</a>
+  </li>
+</ul>
+<a href="/">Back to home</a>
+</body>
+</html>

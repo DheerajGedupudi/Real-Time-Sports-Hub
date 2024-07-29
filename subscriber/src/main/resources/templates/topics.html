@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Topics</title>
+</head>
+<body>
+<h1>Available Topics</h1>
+<ul>
+    <li th:each="topic : ${topics}">
+        <span th:text="${topic}">Topic</span>
+        <form th:action="@{${subscribedTopics.contains(topic) ? '/unsubscribe' : '/subscribe'}}" method="post" style="display:inline;">
+            <input type="hidden" name="topic" th:value="${topic}"/>
+            <button type="submit" th:text="${subscribedTopics.contains(topic) ? 'Unsubscribe' : 'Subscribe'}"></button>
+        </form>
+    </li>
+</ul>
+<a href="/">Back to home</a>
+</body>
+</html>

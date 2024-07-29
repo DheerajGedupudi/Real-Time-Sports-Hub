@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Subscribe to Topics</title>
+</head>
+<body>
+<h1>Subscribe to Topics</h1>
+<form th:action="@{/subscriber/subscribe}" th:object="${subscribeRequest}" method="post">
+    <div>
+        <label for="address">Your Address (IP:Port):</label>
+        <input type="text" id="address" th:field="*{address}" />
+    </div>
+    <div>
+        <label for="topic">Select Topic:</label>
+        <select id="topic" th:field="*{topic}">
+            <option th:each="topic : ${availableTopics}" th:value="${topic}" th:text="${topic}"></option>
+        </select>
+    </div>
+    <div>
+        <button type="submit">Subscribe</button>
+    </div>
+</form>
+<a href="/">Back to home</a>
+</body>
+</html>

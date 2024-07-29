@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Broker Home</title>
+</head>
+<body>
+<h1>Broker Home</h1>
+<a th:href="@{/brokers(timestamp=${timestamp})}">View Brokers</a>
+<a th:href="@{/leader(timestamp=${timestamp})}">View Leader</a>
+<a th:href="@{/topics(timestamp=${timestamp})}">View Topics</a>
+<a th:href="@{/messages(timestamp=${timestamp})}">View Messages</a>
+<a th:href="@{/subscribers(timestamp=${timestamp})}">View Subscribers</a>
+</body>
+</html>

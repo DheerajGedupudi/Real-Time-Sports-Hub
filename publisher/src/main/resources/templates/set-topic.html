@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Set Topic</title>
+</head>
+<body>
+<h1>Set Topic</h1>
+<form action="/set-topic" method="post">
+  <label for="topic">Topic:</label>
+  <input type="text" id="topic" name="topic" required>
+  <button type="submit">Set Topic</button>
+</form>
+<h2>Current Topic: <span th:text="${topic}">None</span></h2>
+<a href="/">Back to Home</a>
+</body>
+</html>
